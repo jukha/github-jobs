@@ -1,0 +1,29 @@
+.hero{
+    min-height: 138px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../../assets/backgroundImg.png') center/cover;
+    padding: 0px 18px;
+    margin-bottom: 30px;
+    @media(min-width:768px){
+        margin-bottom: 44px;
+    }
+    .btn{
+        max-width: 146px;
+        flex-grow: 1;
+        text-align: center;
+    }
+    input[type="text"]{
+        text-overflow: ellipsis;
+        flex-grow: 1;
+        border: none;
+        max-width:140px;
+        &:focus{
+            outline: none;
+        }
+        @media (min-width:400px){
+            max-width: unset;
+        }
+    }
+}
