@@ -64,6 +64,9 @@ textarea,
 select {
   font: inherit;
 }
+input {
+  margin: 0;
+}
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -121,13 +124,17 @@ img {
   flex-grow: 1;
   max-width: 790px;
 }
-::placeholder {
+::placeholder,
+input[type="text"] {
   font-family: var(--ff-primary);
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: var(--clr-secondary);
+}
+input[type="text"] {
+  color: var(--clr-logo);
 }
 [class^="material-icons"] {
   color: var(--clr-secondary);

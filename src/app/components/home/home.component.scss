@@ -1,3 +1,9 @@
+input[type="text"] {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
 .hero {
   min-height: 138px;
   display: flex;
@@ -17,18 +23,24 @@
   input[type="text"] {
     text-overflow: ellipsis;
     flex-grow: 1;
-    border: none;
     max-width: 140px;
-    &:focus {
-      outline: none;
-    }
     @media (min-width: 400px) {
       max-width: unset;
     }
   }
 }
+.body {
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 32px;
+    & > * {
+      flex: 1;
+    }
+  }
+}
 // 01) Filter
 .job-filter {
+  max-width: 379px;
   font-family: var(--ff-secondary);
   font-style: normal;
   font-weight: 500;
@@ -36,15 +48,38 @@
   line-height: 21px;
   color: var(--clr-primary);
   .filter {
-    input {
-      margin: 0;
-    }
-    input [type='checkbox']{
-      
+    input [type="checkbox"] {
     }
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+  .filterHeader {
+    font-family: var(--ff-secondary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--clr-secondary);
+    margin: 30px 0 14px;
+  }
+  .radioBtnGroup {
+    margin-top: 24px;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin-bottom: 35px;
+        @media (min-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 // 02) Jobs Result Section
