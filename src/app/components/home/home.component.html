@@ -1,11 +1,39 @@
 <section class="hero">
     <div class="form-group-withBtn">
-        <span class="material-icons md-48">work</span>
+        <span class="material-icons">work</span>
         <input class="flex-grow" type="text" placeholder="Title, companies, expertise or benefits">
         <a class="btn">Search</a>
     </div>
 </section>
 <section class="body">
-    <aside class="job-filter"></aside>
-    <section class="jobs-wrapper"></section>
+    <!-- 01) Filter -->
+    <aside class="job-filter">
+        <div class="filter">
+            <input type="checkbox" name="" id="fullTime">
+            <label for="fullTime">Full Time</label>
+        </div>
+    </aside>
+    <!-- 02) Jobs Wrapper -->
+    <section class="jobs-wrapper">
+        <article class="job">
+            <img class="job__companyLogo" src="../../../assets/test-img.jpg">
+            <div class="jobInfoWrapper">
+                <div>
+                    <h4 class="job__companyName">Kasisto</h4>
+                    <h3 class="job__role">Front-End Software Engineer</h3>
+                    <span class="job__contractTimeTag">Full time</span>
+                </div>
+                <div class="jobInfo">
+                    <div class="job__location">
+                        <span class="material-icons">public</span>
+                        <span>New York</span>
+                    </div>
+                    <div class="job__publishedInfo">
+                        <span class="material-icons">schedule</span>
+                        <span>5 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 </section>
